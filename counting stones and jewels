@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int numJewelsInStones(string jewels, string stones) {
+        unordered_map<char,int> j1;
+        int result=0;
+        for(auto j2 : stones){
+            j1[j2]++;
+        }
+        for(auto j2 : jewels){
+            result+=j1[j2];
+        }
+        return result;
+    }
+};
